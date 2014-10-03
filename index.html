@@ -3,11 +3,32 @@
   <head>
     <title> test site</title>
 
-    <script type='text/javascript'>(function(w,d,s,src){w['TriblioAnalyticsObject'] = {uid: 'c4dff341c57a30f242dba187391e2978d93f487d5abea264fbd4f42ec539fe4c',site: 'dbeed7c9219b1cc3fea68bd8d8c0d5e0'};var tag = d.createElement(s);var lastScript = d.getElementsByTagName(s)[0];tag.async = 1;tag.src = src;lastScript.parentNode.insertBefore(tag, lastScript);})(window, document, 'script', '//local.host:3500/analytics.js');</script>
+    <script type="text/javascript">(function(w,d,s,src){w['TriblioAnalyticsObject'] = {uid: "QYpVEErPYntQKo2K2zZd",site: "EA"};var tag = d.createElement(s);var lastScript = d.getElementsByTagName(s)[0];tag.async = 1;tag.src = src;tag.setAttribute("data-cfasync","false");lastScript.parentNode.insertBefore(tag, lastScript);})(window, document, 'script', '//local.host:3500/analytics.js');</script>
   </head>
 
   <body>
-    <h1> Welcome to my test site!</h1>
+    <h1> Resource Center!</h1>
+
+<div>
+
+  <script type="text/javascript">
+    window.addEventListener("message", function(event){
+      var height = event.data.height +"px";
+      var width = event.data.width +"px";
+      var iframe = document.getElementById('triblio-hub-Z0');
+      iframe.height = height;
+      iframe.width = width;
+    });
+
+    function autoResize(){
+      var iframe = document.getElementById('triblio-hub-Z0');
+      iframe.contentWindow.postMessage("triblioFrameLoaded","*");
+    }
+  </script>
+
+  <iframe id="triblio-hub-Z0" src="http://local.host:3500/hub?id=dM" style="border:none" width="100%" height="1000px" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize();"></iframe>
+
+</div>
 
   </body>
 </html>
