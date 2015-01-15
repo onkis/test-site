@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <h1>Its an older code sir...</h1>
+    <p>I was just about to clear them</p>
+    
+    <script type='text/javascript'>
+    window.addEventListener("message", function(event){
+      if(event.origin === "http://local.host:3500" || event.origin === "https://local.host:3500"){
+        var data = JSON.parse(event.data);
+        var height = data.height +"px";
+        var iframe = document.getElementById('triblio-hub-nL2');
+        iframe.height = height;
+      }
+    });
+    var autoResizeTriblioHub = function(){
+      var iframe = document.getElementById('triblio-hub-nL2');
+      iframe.contentWindow.postMessage("triblioFrameLoaded","*");
+    }
+    window.onresize = function(){
+      autoResizeTriblioHub();
+    };
+    </script>
+    
+    <iframe src="http://local.host:3500/hub?id=nL2" id="triblio-hub-nL2" style="border: none; width:100%; overflow:visible; margin-bottom: 2em;" marginheight="0" onload="autoResizeTriblioHub();" frameborder="0" height="715px" width="100%"></iframe>
+</html>
