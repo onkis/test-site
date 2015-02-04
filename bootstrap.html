@@ -133,18 +133,78 @@
           </div><!--/row-->
 
           <hr>
-
+          
           <footer>
             <p>&copy; Company 2014</p>
           </footer>
 
         </div><!--/.container-->
-    
-    
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <style>
+        #slidebox{
+            /*width:400px;
+            height:100px;*/
+            width: 1200px;
+            height: 390px;
+/*            padding:10px;*/
+            background-color:#fff;
+            border-top:3px solid #000;
+            position:fixed;
+            bottom:0px;
+            right:-1200px;
+            -moz-box-shadow:-2px 0px 5px #aaa;
+            -webkit-box-shadow:-2px 0px 5px #aaa;
+            box-shadow:-2px 0px 5px #aaa;
+        }
+        a.close{
+            background:transparent url(../images/close.gif) no-repeat top left;
+            width:13px;
+            height:13px;
+            position:absolute;
+            cursor:pointer;
+            top:10px;
+            right:10px;
+        }
+        a.close:hover{
+            background-position:0px -13px;
+        }
+    </style>
+    
+    <script type="text/javascript">
+    $(function() {
+    	$(window).scroll(function(){
+    		var distanceTop = $('footer').offset().top - $(window).height();
+
+    		if  ($(window).scrollTop() > distanceTop)
+    			$('#slidebox').animate({'right':'0px'},400);
+    		else
+    			$('#slidebox').stop(true).animate({'right':'-1200px'},400);
+    	});
+
+    	$('#slidebox .close').bind('click',function(){
+    		$(this).parent().remove();
+    	});
+    });
+    </script>
+    
+    
+    <div id="slidebox">
+      <a class="close"></a>
+      <div id="triblio-hub-oMG-style-override"></div><script type="text/javascript" data-cfasync="false" src="http://local.host:3500/assets/hub_embed.js"></script><script type="text/javascript" data-cfasync="false">//<![CDATA[
+      window.TriblioTrackerOrigin = "http://local.host:3500";
+      window.TRHubPage.registerHub("oMG");
+      //]]></script><link rel="stylesheet" href="http://local.host:3500/assets/hub_embed.css" data-cfasync="false"/><iframe id="triblio-hub-oMG" style="border: none; width:100%; overflow:visible;" width="100%" height="2000px" marginheight="0" frameborder="0"></iframe><script type="text/javascript" data-cfasync="false">//<![CDATA[
+      var iframe = document.getElementById('triblio-hub-oMG');
+      iframe.src = 'http://local.host:3500/hub?id=oMG'+'&tr_outer_url='+encodeURIComponent(document.location.toString())+'&r='+encodeURIComponent(document.referrer);
+      $(iframe).load(function(){window.TRHubPage.autoResizeTriblioHub('oMG');});
+      //]]></script>
+      
+    </div>
+    
+
+    
   </body>
 </html>
