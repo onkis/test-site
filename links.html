@@ -2,12 +2,12 @@
 <html>
   <head>
     <title> test site</title>
-
+    
     <script type="text/javascript">(function(w,d,s,src){w['TriblioAnalyticsObject'] = {uid: "QYpVEErPYntQKo2K2zZd",site: "EA"};var tag = d.createElement(s);var lastScript = d.getElementsByTagName(s)[0];tag.async = 1;tag.src = src;tag.setAttribute("data-cfasync","false");lastScript.parentNode.insertBefore(tag, lastScript);})(window, document, 'script', '//192.168.1.201:3500/analytics.js');</script>
   </head>
 
   <body>
-    <h1> Links Page!</h1>
+    <header><h1> Links Page!</h1></header>
     <div>
       <a href="/links.html">Links Page</a>
     </div>
@@ -37,5 +37,103 @@
       <a href="/bootstrap.html">Bootstrap Page</a>
     </div>
     
+    <div>
+      <a href="/custom_event.html">Custom Event Page</a>
+    </div>
+    <div>
+      <a href="/segment.html">Segment</a>
+    </div>
+        <style>
+          media(max-width: 500px){
+            #slidebox{
+                display:none;
+            }  
+          }
+    
+          #slidebox{
+            /* These values need to be adjusted based on the width of your hub*/
+            width: 1200px;
+            right:-1205px;
+        
+            height: 339px;
+            /*background-color:#fff;*/
+            border-top:3px solid #000;
+            position:fixed;
+            bottom:0px;
+            -moz-box-shadow:-2px 0px 5px #aaa;
+            -webkit-box-shadow:-2px 0px 5px #aaa;
+            box-shadow:-2px 0px 5px #aaa;
+
+            background-color: rgba(255,255,255, 0.95);
+
+            z-index: 1;
+        
+            max-width: 70%;
+        
+        
+          }
+          a.close:before {
+            content: 'x';
+            color: #000;
+            font-weight: 300;
+            font-family: Arial, sans-serif;
+          }
+          a.close{
+            width:13px;
+            height:13px;
+            position:absolute;
+            cursor:pointer;
+            top:10px;
+            right:10px;
+          }
+        </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script type="text/javascript">
+          (function(jQuery, hubWidth, animationTime) {
+            //Values
+            var rightWidth = hubWidth+5;
+        
+            var hide = function(){
+              jQuery('#slidebox').stop(true).animate({'right':'-'+rightWidth+'px'},animationTime);
+            };
+            var remove = function(){
+                jQuery('#slidebox').remove();
+            }
+        
+            jQuery(function(){
+              jQuery('#slidebox').animate({'right':'0px'}, animationTime);
+              
+              // jQuery(window).scroll(function(){
+              //   var distanceTop = jQuery('header').offset().top - jQuery(window).height();
+              //
+              //   if(jQuery(window).scrollTop() > distanceTop){
+              //     jQuery('#slidebox').animate({'right':'0px'}, animationTime);
+              //   }
+              //   else{
+              //     hide();
+              //   }
+              // });
+
+              jQuery('#slidebox .close').bind('click',function(){
+                remove();
+              });
+            })
+
+          }(jQuery, 1200, 400)); //set values here!
+        </script>
+    
+        <div id="slidebox">
+          <a class="close"></a>
+          <div id="triblio-hub-O08-style-override"></div><script type="text/javascript" data-cfasync="false" src="http://local.host:3500/assets/hub_embed.js"></script><script type="text/javascript" data-cfasync="false">//<![CDATA[
+          window.TriblioTrackerOrigin = "http://local.host:3500";
+          window.TRHubPage.registerHub("O08");
+          //]]>
+          </script><link rel="stylesheet" href="http://local.host:3500/assets/hub_embed.css" data-cfasync="false"/><iframe id="triblio-hub-O08" style="border: none; width:100%; overflow:visible;" width="627px" height="447px" marginheight="0" frameborder="0"></iframe><script type="text/javascript" data-cfasync="false">//<![CDATA[
+          var iframe = document.getElementById('triblio-hub-O08');
+          iframe.src = 'http://local.host:3500/hub?id=O08'+'&tr_outer_url='+encodeURIComponent(document.location.toString())+'&r='+encodeURIComponent(document.referrer);
+          $(iframe).load(function(){window.TRHubPage.autoResizeTriblioHub('O08');});
+          //]]>
+          </script>
+        </div>
   </body>
 </html>
