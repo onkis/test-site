@@ -3,7 +3,7 @@
   <body>
     <h1>Old embed code</h1>
     
-    <div id="triblio-rule-bG7-style-override"></div><script type="text/javascript" data-cfasync="false">(function(window, document){
+    <div id="triblio-hub-bG7-style-override"></div><script type="text/javascript" data-cfasync="false">(function(window, document){
       window.addEventListener("message", function(event){
         if(event.origin === "http://local.host:3500" || event.origin === "https://local.host:3500"){
           var data = JSON.parse(event.data);
@@ -16,7 +16,7 @@
         var iframe = document.getElementById('triblio-hub-bG7');
         if(iframe) iframe.height = height;
         var tagName ='style';
-        var styleOverride= document.getElementById('triblio-hub-bG7-style-override');
+        var styleOverride = document.getElementById('triblio-hub-bG7-style-override');
         styleOverride.innerHTML='<'+tagName+'>iframe#triblio-hub-bG7[style] { height:'+height+'!important; }</'+tagName+'>';
       };
 
