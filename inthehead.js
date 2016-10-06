@@ -1,0 +1,1 @@
+console.log("this is in the head tag. It should be first");

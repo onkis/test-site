@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<script type='text/javascript' data-cfasync='false' src='http://local.host:3500/h.js?orgId=QYpVEErPYntQKo2K2zZd'></script>
-    <meta charset="utf-8">
+<script type='text/javascript' data-cfasync='false'>
+      (function(win, doc, src, tagName){
+        var t = doc.createElement(tagName);t.setAttribute("data-cfasync","false")
+        t.src = src+"&r="+encodeURIComponent(doc.referrer)+"&l="+encodeURIComponent(win.location);
+        var h = doc.getElementsByTagName('head')[0];h.appendChild(t);
+      })(window, document, '//local.host:3500/h.js?orgId=QYpVEErPYntQKo2K2zZd', 'script');
+    </script>    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product2</title>
@@ -137,7 +142,18 @@
               </div>
             </div><!--/.sidebar-offcanvas-->
           </div><!--/row-->
-
+          
+          <div class="row">
+            <div class="col-md-6">
+              <form method="post" action="http://local.host:3500/_c">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </div>
+          </div>
           <hr>
           
           <footer>

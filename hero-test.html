@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    
+    <title>This is the title</title>
+    
+    
+    <script type='text/javascript' data-cfasync='false'>
+      (function(doc, src, tagName){
+        var t = doc.createElement(tagName);t.setAttribute("data-cfasync","false")
+        t.src = src;
+        var h = doc.getElementsByTagName('head')[0];h.appendChild(t);
+      })(document, '//local.host:8000/injected.js', 'script');
+    </script>
+    <script src="/inthehead.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type='text/javascript'>
+      jQuery(function(){
+        console.log("jquery ready!")
+      });
+    </script>
+  </head>
+  <body>
+
+    <h1>Hello World</h1>
+    <p> all </p>
+
+  </body>
+</html>
