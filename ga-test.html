@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Blog Post</title>
+    <title>GA Test</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -49,7 +49,7 @@
             <div class="col-lg-8">
 
                 <!-- the actual blog post: title/author/date/content -->
-                <h1>A Simple Blog Template for Bootstrap 3</h1>
+                <h1>GA Test page</h1>
                 <p class="lead">by <a href="index.php">Start Bootstrap</a>
                 </p>
                 <hr>
@@ -166,15 +166,53 @@
         
 
     </div>
-    <script type="text/javascript" data-cfasync="false">    (function(w,d,s,src){
-      w["TriblioAnalyticsObjectLite"] = {uid: "q67AqpvaxwC6x2kJlEzV",site: "VD"};
-        var tag = d.createElement(s);
-        var lastScript = d.getElementsByTagName(s)[0];
-        tag.async = 1;tag.src = src;
-        tag.setAttribute("data-cfasync","false");
-        lastScript.parentNode.insertBefore(tag, lastScript);
-      })(window, document, "script", "//p1.short.triblio-qa.com/analytics-x.js");
-      </script>
+<script>
+    function runFirmTracking(callback){
+      if(typeof ga === 'undefined'){
+        setTimeout(function(){
+          runFirmTracking(callback);
+        }, 1);
+      }
+      else{
+        callback();
+      }
+    }
+    
+    runFirmTracking(function(){
+      ga(function(tracker){
+        if(!tracker || (tracker.get("trackingId") && tracker.get("trackingId") !== "UA-103325-1")){
+          ga("create", "UA-103325-1", "auto");
+        }
+        if(0 > 0){ 
+          ga("set", "dimension3", "Pipeline"); 
+        } 
+        else{ 
+          ga("set", "dimension3", "Prospect"); 
+        }
+        tracker.set("dimension4", "Out of Target");
+        tracker.set("dimension1", "Some Name");
+        tracker.set("dimension5", "Out of Target");
+        tracker.set("dimension6", "N/A");
+        tracker.set("dimension7", "N/A");
+        tracker.set("dimension8", "0");
+    
+        tracker.send('event', { nonInteraction: true});
+      });
+    });
+
+    
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58097597-1', 'auto');
+  ga('send', 'pageview');
+  
+  
+
+
+</script>
 </body>
 
 </html>
