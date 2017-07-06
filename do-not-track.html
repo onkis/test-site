@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type='text/javascript' src="http://local.host:3500/hero.js?id=3M4"></script>
+    <script type='text/javascript' data-cfasync='false' src='//local.host:3500/h.js?orgId=QYpVEErPYntQKo2K2zZd'></script>
+    <script type='text/javascript'>
+      document.body.appendHtml("<div></div>");
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Do Not Track</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!-- /.nav-collapse -->
+          </div><!-- /.container -->
+        </nav><!-- /.navbar -->
+
+        <div class="container" style="margin-top:90px">
+
+          <div class="row row-offcanvas row-offcanvas-right">
+            
+            
+            
+            <div class="col-xs-12 col-sm-9">
+              <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+              </p>
+              <div class="jumbotron">
+                <h1>Do Not Track</h1>
+                <p>This is a Do Not Track Form.</p>
+              </div>
+              <div class="row">
+                <!-- <div id="triblio-hub-O08-style-override"></div><script type="text/javascript" data-cfasync="false" src="http://local.host:3500/assets/hub_embed.js"></script><script type="text/javascript" data-cfasync="false">//<![CDATA[
+                window.TriblioTrackerOrigin = "http://local.host:3500";
+                window.TRHubPage.registerHub("O08");
+                //]]></script><link rel="stylesheet" href="http://local.host:3500/assets/hub_embed.css" data-cfasync="false"/><iframe id="triblio-hub-O08" style="border: none; width:100%; overflow:visible;" width="100%" height="2000px" marginheight="0" frameborder="0"></iframe><script type="text/javascript" data-cfasync="false">//<![CDATA[
+                var iframe = document.getElementById('triblio-hub-O08');
+                iframe.src = 'http://local.host:3500/hub?id=O08'+'&tr_outer_url='+encodeURIComponent(document.location.toString())+'&r='+encodeURIComponent(document.referrer);
+                window.TRHubPage.autoResizeTriblioHub('O08');
+                $(iframe).load(function(){window.TRHubPage.autoResizeTriblioHub('O08');});
+                //]]></script> -->
+              </div>
+            <div class="row">
+            
+            <form id="doNotTrack" method="post" action="https://tribl.io/_do_not_track">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+              </div>
+              <div class="g-recaptcha" data-sitekey="6LcxdxsUAAAAAAdV6lsMDVnRi5kZBsgoJcUHmhPj"></div>
+              
+              <button type="submit" class="btn btn-default">Do Not Track</button>
+            </form>
+            <script type='text/javascript'>
+              jQuery("form#doNotTrack").submit(function(event) {
+                 var recaptcha = jQuery("#g-recaptcha-response").val();
+                 if (recaptcha === "") {
+                    event.preventDefault();
+                    alert("Please check the recaptcha");
+                 }
+              });
+            </script>
+              
+
+          </div><!--/row-->
+
+          <hr>
+          
+          <footer>
+            <p>&copy; Company 2014</p>
+          </footer>
+
+        </div><!--/.container-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+<script type='text/javascript' data-cfasync='false'>
+    (function(doc, src, tagName){
+      var t = doc.createElement(tagName);t.setAttribute("data-cfasync","false")
+      t.src = src+"&r="+encodeURIComponent(doc.referrer);
+      var h = doc.body.appendChild(t);
+    })(document, 'http://local.host:3500/footer.js?orgId=QYpVEErPYntQKo2K2zZd', 'script');
+  </script>
+    <!-- <script>
+      window.addEventListener("message", function(message){
+        console.log("post message received", message);
+      }, false);
+    </script>
+    <iframe src="http://go.market-bridge.com/Triblio-Test-Prefilled-Forms.html", style="display:none"/>
+     -->
+      <div id="triblio-hub-vJZ-style-override"></div><script type="text/javascript" data-cfasync="false" src="http://local.host:3500/assets/hub_embed.js"></script><script type="text/javascript" data-cfasync="false">//<![CDATA[
+      window.TriblioTrackerOrigin = "http://local.host:3500";
+      window.TRHubPage.registerHub("vJZ");
+      //]]></script><link rel="stylesheet" href="http://local.host:3500/assets/hub_embed.css" data-cfasync="false"/><div id="triblio-content-wrapper-vJZ" style="visibility: hidden;"><iframe id="triblio-hub-vJZ" style="border: none; width:100%; overflow:visible;" width="627px" height="447px" marginheight="0" frameborder="0"></iframe></div><script type="text/javascript" data-cfasync="false">//<![CDATA[
+      window.TRHubPage.setupTriblioHub("http://local.host:3500/hub?id=vJZ", "vJZ", "", "", "",
+        "", "");
+      //]]></script>
+
+
+  </body>
+</html>
