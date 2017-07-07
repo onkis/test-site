@@ -100,7 +100,7 @@
                       jQuery("form#tr_submit").submit(function(event) {
                         let email = jQuery('#email').val();
                       
-                        window.TriblioAnalyticsObject.track(40, {emailAddress: email});
+                        window.TriblioAnalyticsObject.track(40, {fd: jQuery.param({emailAddress: email}) });
                         event.preventDefault();
                       });
                     </script>
